@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import "./styles.css";
+import Information from "./components/Information/Information";
+import Patients from "./components/Patients/Patients";
+import { Provider, connect } from "react-redux";
+import { store } from "./store/store";
+import { getDataActionCreatorFunc } from "./store/actions";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  componentDidMount() {
+    this.props.getDataActionCreatorFunc();
+  }
+  render() {
+    return (
+      <div className="App">
+        <div className="container">
+          <Information />
+          <Patients />
+        </div>
+      </div>
+    );
+  }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {};
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getDataActionCreatorFunc: () => dispatch(getDataActionCreatorFunc()),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

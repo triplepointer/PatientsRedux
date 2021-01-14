@@ -1,0 +1,38 @@
+.patients {
+    display: block;
+    border: 1px solid #dfdfdf;
+    margin-left: 100px;
+    box-shadow: #dfdfdf 0px 0px 5px 0px;
+    min-height: 500px;
+    width: 600px;
+  }
+  .patients__categories {
+    display: flex;
+    background: #ccc;
+    border-bottom: 1px solid #dfdfdf;
+  }
+  .patients__category {
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 10px 20px;
+  }
+  
+  .patients__category--1 {
+  }
+  
+  .patients__category--2 {
+    margin-left: 20px;
+  }
+  
+  .patients__category.active {
+    font-weight: bold;
+    color: #3197c8;
+    border-bottom: 1px solid #3197c8;
+  }
+  
+  @media all and (max-width: 1100px) {
+    .patients {
+      margin-left: 0;
+      width: 100%;
+    }
+  }

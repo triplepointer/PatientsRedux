@@ -1,0 +1,45 @@
+.information {
+    border: 1px solid #dfdfdf;
+    box-shadow: #dfdfdf 0px 0px 5px 0px;
+    min-height: 500px;
+    width: 550px;
+  }
+  .information__title {
+    background: #3398cc;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    color: white;
+  }
+  .information__chevron-left {
+    display: block;
+    width: 10px;
+    height: 20px;
+  }
+  .information__text {
+    padding-top: 20px;
+    display: flex;
+  }
+  .information__names,
+  .information__age,
+  .information__diagnosis {
+    width: 200px;
+    display: flex;
+    border-bottom: 1px solid #dfdfdf;
+  }
+  
+  .information__names div {
+    margin-left: 5px;
+  }
+  .information__diagnosis {
+    margin-left: 5px;
+  }
+  .information__age {
+    margin-left: 5px;
+  }
+  
+@media all and (max-width: 1100px) {
+  .information {
+    width: 100%;
+  }
+}

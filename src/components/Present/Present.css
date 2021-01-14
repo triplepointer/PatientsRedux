@@ -1,0 +1,42 @@
+.present {
+}
+.present__header,
+.present__data {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e0e0e0;
+}
+.present__data:active {
+  background: #ccc;
+}
+.present__data:focus {
+  background: #ccc;
+  outline: none;
+}
+
+.present__header-text {
+
+  width: 200px;
+  color: #a6a6a6;
+}
+
+.present__header-text--3 {
+  padding-left: 20px;
+}
+.present__data-text {
+  width: 200px;
+  cursor: pointer;
+}
+
+.present__data-text--1 {
+  width: 100px;
+}
+
+.present__data-text--2 {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+.present__data-text--3 {
+  padding-left: 20px;
+}
