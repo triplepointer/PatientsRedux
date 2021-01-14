@@ -1,4 +1,4 @@
-Illustration of the application
+# Illustration of the application
 ![working](working.gif)
 
 # Getting Started with Create React App
